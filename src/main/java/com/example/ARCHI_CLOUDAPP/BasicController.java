@@ -12,7 +12,7 @@ public class BasicController {
 
     @GetMapping( "")
     public @ResponseBody String greeting() {
-        return "<h1> Yaa lghder bda </h1>";
+        return "<h1> Yaa lghder bda</h1>";
     }
 
 }
