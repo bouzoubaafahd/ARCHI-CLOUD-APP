@@ -20,7 +20,7 @@ public class BasicController {
 
     @GetMapping( "")
     public @ResponseBody String greeting() {
-        counterManager.increment(1L);
+     //   counterManager.increment(1L);
 
         return "<h1> Hello world!!"  + "</h1>" ;
         //+  repo.findById(1L).toString()
