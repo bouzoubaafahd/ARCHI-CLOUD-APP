@@ -11,8 +11,8 @@ public class CounterManager {
     @Autowired
     Repo repository;
 
-    public void increment(Long id){
-    Count count = repository.findCountById(id);
+    public void increment(String name){
+    Count count = repository.findCountByName("Fahde");
     repository.delete(count);
     count.setCounter(count.getCounter() + 1);
     repository.save(count);

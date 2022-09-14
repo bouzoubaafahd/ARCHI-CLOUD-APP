@@ -13,15 +13,15 @@ public class Count {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
     private Long id;
-    private String firstName;
+    private String name;
     private String lastName;
     private int counter;
 
     protected Count() {}
 
-    public Count(Long id ,String firstName, String lastName, int counter) {
+    public Count(Long id , String name, String lastName, int counter) {
         this.id = id;
-        this.firstName = firstName;
+        this.name = name;
         this.lastName = lastName;
         this.counter = counter;
     }
@@ -30,15 +30,15 @@ public class Count {
     public String toString() {
         return String.format(
                 "Count[id=%d, firstName='%s', lastName='%s' , counter = '%s']",
-                id, firstName, lastName, counter);
+                id, name, lastName, counter);
     }
 
     public Long getId() {
         return id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getName() {
+        return name;
     }
 
     public String getLastName() {
@@ -58,11 +58,11 @@ public class Count {
         if (this == o) return true;
         if (!(o instanceof Count)) return false;
         Count count = (Count) o;
-        return counter == count.counter && Objects.equals(id, count.id) && Objects.equals(firstName, count.firstName) && Objects.equals(lastName, count.lastName);
+        return counter == count.counter && Objects.equals(id, count.id) && Objects.equals(name, count.name) && Objects.equals(lastName, count.lastName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstName, lastName, counter);
+        return Objects.hash(id, name, lastName, counter);
     }
 }

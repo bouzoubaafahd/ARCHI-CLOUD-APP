@@ -29,14 +29,14 @@ public class ArchiCloudAppApplication implements ApplicationRunner {
 
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
-		  getConnection();
+		//  getConnection();
           repo.deleteAll();
 		  repo.save(new Count(1L , "Fahde" , "Bouzoubaa" , 0));
 
 
 	}
 
-	private  Connection getConnection() throws URISyntaxException, SQLException {
+	/*private  Connection getConnection() throws URISyntaxException, SQLException {
 		URI dbUri = new URI(System.getenv("DATABASE_URL"));
 
 		String username = dbUri.getUserInfo().split(":")[0];
@@ -45,4 +45,6 @@ public class ArchiCloudAppApplication implements ApplicationRunner {
 
 		return DriverManager.getConnection(dbUrl, username, password);
 	}
+
+	 */
 }
