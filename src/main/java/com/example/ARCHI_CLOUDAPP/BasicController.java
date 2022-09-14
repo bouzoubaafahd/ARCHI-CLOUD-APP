@@ -22,7 +22,8 @@ public class BasicController {
     public @ResponseBody String greeting() {
         counterManager.increment(1L);
 
-        return "<h1> Hello world!!</h1>" + repo.findById(1L).toString();
+        return "<h1> Hello world!!"  + "</h1>" ;
+        //+  repo.findById(1L).toString()
     }
 
 }
