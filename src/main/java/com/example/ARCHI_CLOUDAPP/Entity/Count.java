@@ -19,7 +19,8 @@ public class Count {
 
     protected Count() {}
 
-    public Count(String firstName, String lastName, int counter) {
+    public Count(Long id ,String firstName, String lastName, int counter) {
+        this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.counter = counter;
